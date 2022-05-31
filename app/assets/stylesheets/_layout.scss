@@ -1,0 +1,21 @@
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+}
+
+.center {
+	display: block;
+	text-align: center;
+}
+
+main {
+	padding-top: 20px;
+}
+
+.index.grid {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}

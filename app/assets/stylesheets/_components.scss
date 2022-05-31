@@ -1,0 +1,93 @@
+// HEADER
+header {
+	padding: 20px 0;
+	justify-content: space-between;
+	align-items: center;
+	.flex {
+		gap: 10px;
+	}
+	h1,
+	p {
+		color: #1c3360;
+	}
+	p {
+		font-size: 0.75rem;
+	}
+}
+
+// CARDS
+.card {
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 10px;
+	width: 85%;
+	margin: auto;
+	color: #000;
+	h2 {
+		font-size: 3.31rem;
+	}
+	p {
+		font-size: 1.125rem;
+		padding-bottom: 1rem;
+	}
+	a {
+		color: #707070;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// SHOW
+.show {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	.buttons {
+		padding: 20px;
+	}
+	.added {
+		color: #707070;
+		font-size: 0.8rem;
+	}
+}
+
+// NEW
+.new {
+	height: 74vh;
+	margin-top: 20px;
+	h2 {
+		font-size: 3.31rem;
+		text-align: center;
+	}
+	form {
+		width: 70%;
+		margin: auto;
+		background-color: #fff;
+		border-radius: 10px 10px 0 0;
+		height: 100%;
+		padding: 20px;
+		.field {
+			padding-bottom: 10px;
+			label {
+				display: block;
+				padding-bottom: 10px;
+			}
+			input,
+			textarea {
+				padding: 5px;
+				width: 100%;
+			}
+			textarea {
+				height: 100px;
+			}
+		}
+		.actions {
+			text-align: right;
+			input {
+				padding: 15px;
+				border: none;
+			}
+		}
+	}
+}

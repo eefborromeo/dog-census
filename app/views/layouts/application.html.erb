@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Vollkorn:wght@900&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="flex">
+    <a href="/dogs">
+      <div class="flex">
+        <%= image_tag ("dog-census-logo.svg"), id: "logo" %>
+        <div>
+          <h1>Dog Census</h1>
+          <p>I just wan't to know how many dogs there are in the world</p>
+        </div>
+      </div>
+    </a>
+      <nav>
+        <ul>
+          <li><a href="/dogs/new">+ Add your dog to the census</a></li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

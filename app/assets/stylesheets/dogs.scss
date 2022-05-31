@@ -1,3 +1,8 @@
 // Place all the styles related to the dogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@use '_base';
+@use '_components';
+@use '_layout';
+@use '_media';
