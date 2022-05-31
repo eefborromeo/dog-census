@@ -8,7 +8,7 @@
         <span class="added">This good dog was added to the census <%= time_ago_in_words(@dog.created_at) %> ago
     </div>
     <div class="buttons center">
-        <%= link_to raw('<button>Edit</button>'), edit_dogs_path(@dog) %>
-        <%= button_to 'Delete', @dog, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to raw('<button class="edit">Edit</button>'), edit_dogs_path(@dog) %>
+        <%= link_to raw('<button class="delete">Delete</button>'), @dog, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
 </main>

@@ -51,13 +51,11 @@ header {
 	text-align: center;
 	.buttons {
 		padding: 20px;
-		button,
-		form {
+		button {
 			display: inline-block;
 			width: 45%;
 		}
-		button,
-		.button_to input {
+		button {
 			border: none;
 			padding: 20px;
 			border-radius: 5px;
@@ -65,11 +63,10 @@ header {
 			color: #fff;
 			text-transform: uppercase;
 		}
-		button {
+		.edit {
 			background-color: #1c3360;
 		}
-		.button_to input {
-			width: 100%;
+		.delete {
 			background-color: #ff4d4d;
 		}
 	}
