@@ -13,6 +13,12 @@ header {
 	p {
 		font-size: 0.75rem;
 	}
+	li a {
+		background-color: #1c3360;
+		color: #fff;
+		padding: 10px;
+		border-radius: 5px;
+	}
 }
 
 // CARDS
@@ -45,6 +51,27 @@ header {
 	text-align: center;
 	.buttons {
 		padding: 20px;
+		button,
+		form {
+			display: inline-block;
+			width: 45%;
+		}
+		button,
+		.button_to input {
+			border: none;
+			padding: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		button {
+			background-color: #2b2be6;
+		}
+		.button_to input {
+			width: 100%;
+			background-color: #ff4d4d;
+		}
 	}
 	.added {
 		color: #707070;
@@ -52,26 +79,33 @@ header {
 	}
 }
 
-// NEW
-.new {
-	height: 74vh;
+// NEW / EDIT
+.new,
+.edit {
 	margin-top: 20px;
 	h2 {
 		font-size: 3.31rem;
 		text-align: center;
 	}
 	form {
-		width: 70%;
+		width: 50%;
 		margin: auto;
 		background-color: #fff;
 		border-radius: 10px 10px 0 0;
-		height: 100%;
 		padding: 20px;
+		.error {
+			background-color: #ff00007a;
+			border: 3px solid red;
+			padding: 10px;
+			border-radius: 10px;
+			margin-bottom: 10px;
+		}
 		.field {
 			padding-bottom: 10px;
 			label {
 				display: block;
 				padding-bottom: 10px;
+				font-weight: bold;
 			}
 			input,
 			textarea {

@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+	body {
+		width: 100%;
+	}
+
+	header {
+		background-color: #afd7df;
+		flex-direction: column;
+		gap: 50px;
+		position: sticky;
+		top: 0;
+		p {
+			font-size: 0.65rem;
+		}
+	}
+	.index > .grid {
+		grid-template-columns: 1fr;
+	}
+
+	.card h2 {
+		font-size: 2.5rem;
+	}
+
+	.show {
+		width: 100%;
+	}
+
+	.new form,
+	.edit form {
+		width: 90%;
+	}
+}

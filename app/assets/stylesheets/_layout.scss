@@ -4,6 +4,8 @@
 
 .grid {
 	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
 }
 
 .center {
@@ -15,7 +17,9 @@ main {
 	padding-top: 20px;
 }
 
-.index.grid {
-	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
+.index {
+	text-align: center;
+	h2 {
+		padding-bottom: 20px;
+	}
 }
