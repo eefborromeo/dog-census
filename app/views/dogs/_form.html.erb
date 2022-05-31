@@ -1,0 +1,39 @@
+<%= form_with(model: dog) do |form| %>
+    <% if dog.errors.any? %>
+    <div class="error">
+        <ul>    
+            <% dog.errors.each do |error| %>
+                <li> <%= error.full_message %> </li>
+            <% end %>
+        </ul>
+    </div>
+        <% end %>
+    <div class="field">
+        <%= form.label :name, "Name:" %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+        <%= form.label :age, "Age:" %>
+        <%= form.text_field :age %>
+    </div>
+
+    <div class="field">
+        <%= form.label :breed, "Breed:" %>
+        <%= form.text_field :breed %>
+    </div>
+
+    <div class="field">
+        <%= form.label :likes, "Likes:" %>
+        <%= form.text_area :likes %>
+    </div>
+
+    <div class="field">
+        <%= form.label :dislikes, "Dislikes:" %>
+        <%= form.text_area :dislikes %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+<% end %>

@@ -1,8 +1,11 @@
-<main class="index grid">
-<% @dogs.each do |dog| %>
-    <a href="/dogs/<%= dog.id %>" class="card">
-        <h2><%= dog.name %>, <%= dog.age %></h2>
-        <p><%= dog.breed %></p>
-    </a>
-<% end %>
+<main class="index">
+    <h2>There <%= @dogs.count == 1 ? "is" : "are" %> <%= @dogs.count %> good <%= @dogs.count == 1 ? "dog" : "dogs" %> currently registered </h2>
+    <div class="grid">
+    <% @dogs.each do |dog| %>
+        <a href="/dogs/<%= dog.id %>" class="card">
+            <h2><%= dog.name %>, <%= dog.age %></h2>
+            <p><%= dog.breed %></p>
+        </a>
+    <% end %>
+    </div>
 </main>

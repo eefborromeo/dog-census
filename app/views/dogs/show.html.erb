@@ -3,12 +3,12 @@
         <h1><%= @dog.name %></h1>
         <p>Age: <%= @dog.age %></p>
         <p>Breed: <%= @dog.breed %></p>
-        <p>Likes: <%= @dog.likes == nil ? "N/A" : @dog.likes %></p>
-        <p>Dislikes: <%= @dog.dislikes == nil ? "N/A" : @dog.dislikes %></p>
+        <p>Likes: <%= @dog.likes == '' || @dog.likes == nil ? "N/A" : @dog.likes %></p>
+        <p>Dislikes: <%=  @dog.dislikes == '' || @dog.dislikes == nil ? "N/A" : @dog.dislikes %></p>
         <span class="added">This good dog was added to the census <%= time_ago_in_words(@dog.created_at) %> ago
     </div>
     <div class="buttons center">
-        <button>Edit</button>
-        <button>Delete</button>
+        <%= link_to raw('<button>Edit</button>'), edit_dogs_path(@dog) %>
+        <%= button_to 'Delete', @dog, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
 </main>
