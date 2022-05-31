@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'dogs#index'
-  
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html 
   get '/dogs', to: 'dogs#index', as: 'dogs'
   get '/dogs/new', to: 'dogs#new'
   get '/dogs/:id/edit', to: 'dogs#edit', as: 'edit_dogs'
@@ -10,4 +8,5 @@ Rails.application.routes.draw do
   patch '/dogs/:id', to: 'dogs#update'
   delete '/dogs/:id', to: 'dogs#destroy' 
   
+  root 'dogs#index'
 end
