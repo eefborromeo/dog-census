@@ -3,6 +3,7 @@ class DogsController < ApplicationController
     
     def index
         @dogs = Dog.all.order(created_at: :desc)
+        @breeds = Dog.select(:breed).distinct
     end
 
     def show

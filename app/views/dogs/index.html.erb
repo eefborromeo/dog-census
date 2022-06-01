@@ -1,5 +1,11 @@
 <main class="index">
     <h2>There <%= @dogs.count == 1 ? "is" : "are" %> <%= @dogs.count %> good <%= @dogs.count == 1 ? "dog" : "dogs" %> currently registered </h2>
+    <select id="sort">
+            <option>Select a breed</option>
+        <%= @breeds.each do |breed| %>
+            <option><%= breed.breed %></option>
+        <% end %>
+    </select>
     <div class="grid">
     <% @dogs.each do |dog| %>
         <a href="/dogs/<%= dog.id %>" class="card">
@@ -9,3 +15,4 @@
     <% end %>
     </div>
 </main>
+<%= javascript_pack_tag 'custom', 'data-turbolinks-track': 'reload' %>
