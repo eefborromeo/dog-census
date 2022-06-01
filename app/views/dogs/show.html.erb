@@ -1,6 +1,8 @@
 <main class="show">
 <div class="card">
-        <%=image_tag @dog.avatar.attached? ? @dog.avatar : 'dog-census-logo.svg' %>
+        <% if @dog.avatar.present? %>
+            <%= image_tag @dog.avatar %>
+        <% end %>
         <h1><%= @dog.name %></h1>
         <p>Age: <%= @dog.age %></p>
         <p>Breed: <%= @dog.breed %></p>
