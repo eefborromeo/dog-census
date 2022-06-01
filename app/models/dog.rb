@@ -9,7 +9,7 @@ class Dog < ApplicationRecord
 
     def acceptable_image
         if avatar.attached?
-            unless avatar.byte_size <= 1.megabyte
+            unless avatar.byte_size <= 2.megabyte
                 errors.add(:avatar, "is too big")
             end
 
