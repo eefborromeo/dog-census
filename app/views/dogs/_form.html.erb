@@ -33,6 +33,18 @@
         <%= form.text_area :dislikes %>
     </div>
 
+    <div class="field">
+        <%= form.label :avatar do %>
+            <% if form.object.avatar.attached? %>
+                The currently attached file is <%= form.object.avatar.filename %>. Upload a new file to replace it.
+                
+            <% else %>
+                No profile picture has been uploaded yet. Please pick a file.
+                <% end %>
+            <% end %>
+                <%= form.file_field :avatar %>
+    </div>
+
     <div class="actions">
         <%= form.submit %>
     </div>

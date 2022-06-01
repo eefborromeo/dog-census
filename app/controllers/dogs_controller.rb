@@ -39,6 +39,11 @@ class DogsController < ApplicationController
         redirect_to dogs_path
     end
 
+    # def delete_image_attachment
+    #     @image = ActiveStorage::Blob.find_signed(params[:id])
+    #     @image.purge
+    # end
+
     private
 
         def set_dog
@@ -46,6 +51,6 @@ class DogsController < ApplicationController
         end
 
         def dog_params
-            params.require(:dog).permit(:name, :age, :breed, :likes, :dislikes)
+            params.require(:dog).permit(:name, :age, :breed, :likes, :dislikes, :avatar)
         end
 end

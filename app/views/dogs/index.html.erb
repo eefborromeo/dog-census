@@ -9,6 +9,9 @@
     <div class="grid">
     <% @dogs.each do |dog| %>
         <a href="/dogs/<%= dog.id %>" class="card">
+            <% if dog.avatar.present? %>
+                <%= image_tag dog.avatar.variant(resize_to_limit: [70, nil]) %>
+            <% end %>
             <h2><%= dog.name %>, <%= dog.age %></h2>
             <p><%= dog.breed %></p>
         </a>
