@@ -15,7 +15,7 @@ class Dog < ApplicationRecord
 
             acceptable_types = ["image/jpeg", "image/png"]
             unless acceptable_types.include?(avatar.content_type)
-                erros.add(:avatar, "must be a JPEG or PNG")
+                errors.add(:avatar, "must be a JPEG or PNG")
             end
         end
     end
