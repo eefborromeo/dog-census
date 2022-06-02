@@ -36,7 +36,6 @@ class DogsController < ApplicationController
 
     def destroy
         @dog.destroy
-        @dog.avatar.purge
         redirect_to dogs_path
     end
 

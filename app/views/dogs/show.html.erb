@@ -1,4 +1,7 @@
 <main class="show">
+<div class="back">
+    <%= link_to "< Back", :back %>
+</div>
 <div class="card">
         <% if @dog.avatar.present? %>
             <%= image_tag @dog.avatar %>

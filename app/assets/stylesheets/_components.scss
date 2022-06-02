@@ -65,9 +65,19 @@ select {
 
 // SHOW
 .show {
-	width: 50%;
-	margin: auto;
-	text-align: center;
+	.back {
+		a {
+			color: #fff;
+			background-color: #1c3360;
+			padding: 10px;
+		}
+		margin-bottom: 20px;
+	}
+	.card {
+		width: 50%;
+		margin: auto;
+		text-align: center;
+	}
 	img {
 		width: 300px;
 		height: 300px;
