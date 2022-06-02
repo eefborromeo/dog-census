@@ -36,13 +36,9 @@ class DogsController < ApplicationController
 
     def destroy
         @dog.destroy
+        @dog.avatar.purge
         redirect_to dogs_path
     end
-
-    # def delete_image_attachment
-    #     @image = ActiveStorage::Blob.find_signed(params[:id])
-    #     @image.purge
-    # end
 
     private
 
