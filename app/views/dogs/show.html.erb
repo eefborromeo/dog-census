@@ -1,6 +1,11 @@
 <main class="show">
-<div class="back">
-    <%= link_to "< Back", :back %>
+<div class="flex nav">
+    <% if @previous %>
+        <%= link_to "< Previous Dog", dog_path(@previous.id) %>
+    <% end %>
+    <% if @next %>
+        <%= link_to "Next Dog >", dog_path(@next.id) %>
+    <% end %>
 </div>
 <div class="card">
         <% if @dog.avatar.present? %>

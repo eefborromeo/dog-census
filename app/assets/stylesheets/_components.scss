@@ -65,13 +65,17 @@ select {
 
 // SHOW
 .show {
-	.back {
+	.nav {
 		a {
 			color: #fff;
 			background-color: #1c3360;
 			padding: 10px;
+			border-radius: 5px;
 		}
-		margin-bottom: 20px;
+		justify-content: center;
+		gap: 10px;
+		width: 90%;
+		margin: auto auto 20px;
 	}
 	.card {
 		width: 50%;
@@ -88,6 +92,8 @@ select {
 		object-fit: contain;
 	}
 	.buttons {
+		width: 50%;
+		margin: auto;
 		padding: 20px;
 		button {
 			display: inline-block;

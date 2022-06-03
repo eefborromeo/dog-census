@@ -7,6 +7,8 @@ class DogsController < ApplicationController
     end
 
     def show
+        @previous = Dog.where("id > :prev", prev: params[:id]).order(id: :asc).first
+        @next = Dog.where("id < :next", next: params[:id]).order(id: :desc).first
     end
 
     def new
